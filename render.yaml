@@ -1,0 +1,8 @@
+services:
+  - type: worker
+    name: jee-mentor-bot
+    env: python
+    plan: starter
+    buildCommand: cd bot && pip install -r requirements.txt
+    startCommand: cd bot && python main.py
+    autoDeploy: true
